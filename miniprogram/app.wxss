@@ -1,0 +1,147 @@
+@import './style/animate.wxss';
+page{
+  padding: 0;
+  margin: 0;
+}
+.por{
+  position: relative;
+}
+.poa{
+  position: absolute;
+}
+.pof{
+  position: fixed;
+}
+.flex{
+  display: flex;
+}
+.flex-r {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+
+.flex-c {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.center {
+	align-items: center;
+}
+
+.jcenter {
+	justify-content: center;
+}
+
+/* 均匀评分盒子的宽度 */
+.fcenter{
+  justify-content: space-evenly;
+}
+.flexYeswrap{
+  flex-wrap:wrap;
+}
+.flexNowrap{
+  flex-wrap:nowrap;
+}
+.between {
+	justify-content: space-between;
+}
+
+.around {
+	justify-content: space-around;
+}
+.end {
+	justify-content: flex-end;
+}
+.baseline {
+	align-items: baseline;
+}
+
+.center-self {
+	align-self: center;
+}
+
+.end-self {
+	align-self: flex-end;
+}
+
+.start-self {
+	align-self: flex-start;
+}
+
+.one-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+
+
+.two-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+
+.three-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+
+.four-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+
+.five-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+
+.seven-row {
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
+	align-content: center;
+}
+.fs16{
+  font-size: 16rpx;
+}
+.fs26{
+  font-size: 26rpx;
+}
+.fs36{
+  font-size: 36rpx;
+}
+.fs46{
+  font-size: 46rpx;
+}
+.transition{
+  transition: all .3s;
+}

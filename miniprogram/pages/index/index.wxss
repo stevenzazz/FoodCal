@@ -1,0 +1,37 @@
+.title{
+  z-index:-1;width:750rpx;height:80rpx;left:40rpx;top:300rpx;
+}
+.bg{
+  width:100vw;height:100vh;top:0;left:0;z-index:-1;
+}
+.inputBox{
+  width: 600rpx;
+  height:88rpx;
+  background: #fff;
+  border-radius: 50rpx;
+  margin-left:60rpx;
+  margin-top:500rpx;
+  padding-left: 30rpx;
+}
+.botton{
+  width: 170rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 33rpx;
+  background: #00594f;
+  border-radius: 50rpx;
+  margin:30rpx 0 0 520rpx;
+}
+.hoverClass{
+  width: 170rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 33rpx;
+  background: #00884f;
+  border-radius: 50rpx;
+  margin:30rpx 0 0 520rpx;
+}

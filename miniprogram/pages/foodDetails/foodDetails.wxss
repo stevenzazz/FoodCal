@@ -1,0 +1,29 @@
+page{
+  background: #00594f;
+}
+.title{
+  color: #fff;
+  font-size: 80rpx;
+  font-family: PingFangSC-Medium;
+  margin:20rpx 0 0 40rpx;
+  font-weight: 900;
+}
+.category{
+  color: #fff;
+  font-size: 50rpx;
+  font-family: PingFangSC-Medium;
+  margin:10rpx 0 0 40rpx;
+}
+.element{
+  padding: 20rpx;
+  width: 640rpx;
+  margin: 20rpx 0 0 24rpx;
+  border-radius: 20rpx;
+  font-size: 40rpx;
+  /* background: rgba(2555, 0, 0, .3) */
+}
+.elementItme{
+  color:#00594f;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}

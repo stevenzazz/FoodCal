@@ -1,0 +1,45 @@
+page{
+  /* background-image: linear-gradient(#00594f, #3c8750); */
+  background: #00594f;
+  padding-top: 120rpx;
+}
+.foodbox{
+  width: 710rpx;
+  height: 200rpx;
+  background: #fff;
+  margin-left: 20rpx;
+  border-radius: 28rpx;
+  margin-bottom: 20rpx;
+}
+.name{
+  font-family: PingFangSC-Medium;
+  font-size: 48rpx;
+  color: #323333;
+  left:211rpx;
+  top:20rpx;
+  width: 480rpx;
+}
+.red{
+  width: 23rpx;
+  height: 23rpx;
+  left:210rpx;
+  top:146rpx;
+  background: red;
+  border-radius: 50rpx;
+}
+.yellow{
+    width: 23rpx;
+    height: 23rpx;
+    left:210rpx;
+    top:146rpx;
+    background: yellow;
+    border-radius: 50rpx;
+}
+.green{
+  width: 23rpx;
+  height: 23rpx;
+  left:210rpx;
+  top:146rpx;
+  background: green;
+  border-radius: 50rpx;
+}

@@ -1,0 +1,19 @@
+<image style='width:750rpx;height:520rpx;' src="{{foodData.imgUrl}}" mode="aspectFill" >
+</image> 
+<view class="flex-r"></view>
+<view class="title">{{foodData.name}}</view>
+<view style="color:#fff;margin-left:40rpx;font-size: 60rpx;" wx:if='{{foodData.compare.amount1}}'>100克≈{{foodData.compare.amount1+foodData.compare.unit1+foodData.compare.target_name}}</view>
+
+<view style="color:#fff;margin-left:40rpx;font-size: 38rpx;margin-top: 10rpx;">每{{foodData.weight}}克含营养元素:</view>
+<view style="width:670rpx;background:#fff;margin-left:40rpx;padding:20rpx;border-radius: 20rpx;margin-top: 20rpx;" class="flex-c">
+  <view class="elementItme" style="font-size:80rpx;margin:20rpx 0;">卡路里:{{foodData.calory}}千卡</view>
+  <view class="elementItme">碳水化合物:{{foodData.carbohydrate}}克</view>
+  <view class="elementItme">蛋白质:{{foodData.protein}}克</view>
+  <view class="elementItme">脂肪:{{foodData.fat}}克</view>
+</view>
+<view style="color:#fff;margin-left:40rpx;font-size: 38rpx;margin-top: 27rpx;">提示:</view>
+<view style="width:670rpx;background:#fff;margin-left:40rpx;padding:20rpx;border-radius: 20rpx;margin-top: 20rpx;" class="flex-c"> 
+  <view class="elementItme">{{foodData.appraise}}</view>
+</view>
+<image src="../../images/more.png" class="pof" style="top:100rpx;left:20rpx;transform:rotate(180deg);width:84rpx;height:84rpx;" catchtap="back"></image>
+<view style="height:50rpx;"></view> 

@@ -15,5 +15,8 @@
   "style": "v2",
   "requiredBackgroundModes": [
     "audio"
-  ]
+  ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
 }

@@ -27,3 +27,25 @@ page{
   line-height: 60rpx;
   font-size: 36rpx;
 }
+
+
+.botton{
+  width: 170rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 33rpx;
+  background: #00594f;
+  border-radius: 0 50rpx 50rpx 0;
+}
+.hoverClass{
+  width: 170rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 33rpx;
+  background: #00884f;
+  border-radius: 0 50rpx 50rpx 0;
+}

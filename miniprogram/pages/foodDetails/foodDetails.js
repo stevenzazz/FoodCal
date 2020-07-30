@@ -34,6 +34,11 @@ Page({
       delta: 1
     })
   },
+  backHome(){
+    wx.reLaunch({
+      url: '/pages/index/index'
+    })
+  },
 
   // convertKey (arr, key) {
   //   let newArr = [];
@@ -103,6 +108,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    return{}
+    
   }
 })

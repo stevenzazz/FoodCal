@@ -8,3 +8,7 @@
   <view class="poa" style="left: 245rpx;top: 134rpx;" wx:if='{{item.healthLight==3}}'>红灯食品谨慎食用</view>
   <image src="../../images/more.png" style="width:60rpx;height:60rpx;right:25rpx;top:68rpx;" class="poa"></image>
 </view> 
+
+
+<view class="botton pof" style="left:0;top:80vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
+

@@ -15,5 +15,11 @@
 <view style="width:670rpx;background:#fff;margin-left:40rpx;padding:20rpx;border-radius: 20rpx;margin-top: 20rpx;" class="flex-c"> 
   <view class="elementItme">{{foodData.appraise}}</view>
 </view>
-<image src="../../images/more.png" class="pof" style="top:100rpx;left:20rpx;transform:rotate(180deg);width:84rpx;height:84rpx;" catchtap="back"></image>
 <view style="height:50rpx;"></view> 
+
+
+<view class="botton pof" style="left:0;top:7vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
+<view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200'>去首页</view>
+
+
+

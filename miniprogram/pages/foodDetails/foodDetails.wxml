@@ -18,9 +18,12 @@
 <view style="height:50rpx;"></view> 
 
 
-<view class="botton pof" style="left:0;top:7vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
-<view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="toSuggest" hover-stay-time='200'>建议</view>
-<view class="botton pof" style="left:0;top:19vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200'>去首页</view>
+<view class="botton pof" style="left:0;top:7vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200' wx:if='{{scene!=1154}}'>返回</view>
+<view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="toSuggest" hover-stay-time='200' wx:if='{{scene!=1154}}'>建议</view>
+<view class="botton pof" style="left:0;top:19vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200' wx:if='{{scene!=1154}}'>去首页</view>
+
+
+<image src="https://resource.51tomi.com/images/bg/shareMoments@2x.png" style="width:312rpx;height:184rpx;left:364rpx;top:10%;z-index:19;" class="pof" wx:if="{{shareMoments&&scene!=1154&&platform!='ios'}}" catchtap="offShareMoments"></image>
 
 
 

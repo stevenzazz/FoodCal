@@ -5,16 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    foodData:null
+    foodData:null,
+    scene:'',
+    platform:'',
+    shareMoments:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var scene = wx.getLaunchOptionsSync().scene
+    this.setData({
+      scene:scene,
+      platform:wx.getSystemInfoSync().platform,
+      shareMoments:wx.getStorageSync('shareMoments') == 'false' ? false : true
+    })
     var id = options.id
     this.getData(id)
   },
+  
+    // 点击了分享朋友圈不再提示
+    offShareMoments(){
+      this.setData({
+        shareMoments:false
+      })
+      wx.setStorageSync('shareMoments', 'false')
+    },
 
   async getData(id){
     var res = await getFoodDetail({
@@ -78,7 +95,12 @@ Page({
   },
 
   onShareTimeline: function () {
-    return { }
+    return {
+      title: '食物卡路里小程序:' + this.data.foodData.name + '每' + this.data.foodData.weight + '克含有' + this.data.foodData.calory + '卡路里',
+      query: {
+        id: this.data.foodData.id
+      },
+    }
   }, 
 
 

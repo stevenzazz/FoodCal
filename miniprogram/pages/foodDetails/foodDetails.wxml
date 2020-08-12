@@ -19,7 +19,9 @@
 
 
 <view class="botton pof" style="left:0;top:7vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
-<view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200'>去首页</view>
+<view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="toSuggest" hover-stay-time='200'>建议</view>
+<view class="botton pof" style="left:0;top:19vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200'>去首页</view>
+
 
 
 

@@ -9,6 +9,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
@@ -21,7 +22,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wxd283447578e4486b",
@@ -106,6 +107,12 @@
 					"name": "pages/foodDetails/foodDetails",
 					"pathName": "pages/foodDetails/foodDetails",
 					"query": "id=998",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/suggest/suggest",
+					"pathName": "pages/suggest/suggest",
 					"scene": null
 				}
 			]

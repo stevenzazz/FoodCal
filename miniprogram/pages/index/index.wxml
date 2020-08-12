@@ -5,3 +5,4 @@
 <input class="inputBox" placeholder="输入要查找的食物吧~" model:value="{{value}}"></input>
 
 <view class="botton" hover-class="hoverClass" catchtap="search" hover-stay-time='200'>搜索</view>
+

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/foodDetails/foodDetails",
-    "pages/foodList/foodList"
+    "pages/foodList/foodList",
+    "pages/suggest/suggest"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -17,6 +18,8 @@
     "audio"
   ],
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
   }
 }

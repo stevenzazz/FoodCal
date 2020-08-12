@@ -1,0 +1,20 @@
+
+<van-notice-bar
+  color="#1989fa"
+  background="#ecf9ff"
+  left-icon="star"
+  wrapable
+  text="开发者为刚毕业的程序员一枚，前段时间花了4个月减肥瘦了40斤，所以萌生了一个制作这样一个小程序的想法，想法很简单，制作一个方便，极简，数据明确的卡路里查询工具，抛开一切，只留搜索，在吃食物以前只需秒开小程序，输入要吃的食物名，就能得到你想要的数据，在使用中如果有什么好的建议和想法。都可以留下亲的建议。"
+/>
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入~(带入微信号，必要时我将与您取得联系)"
+    border="{{ true }}"
+    bind:change="valueChange"
+    label='建议'
+    type='textarea'
+    autosize='{{autosize}}'
+  />
+</van-cell-group>
+<van-button type="info" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='submit'>提交</van-button>

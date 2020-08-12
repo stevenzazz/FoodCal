@@ -29,6 +29,12 @@ Page({
     }
   },
 
+  toSuggest(){
+    wx.navigateTo({
+      url: '/pages/suggest/suggest'
+    })
+  },
+
   back(){
     wx.navigateBack({
       delta: 1

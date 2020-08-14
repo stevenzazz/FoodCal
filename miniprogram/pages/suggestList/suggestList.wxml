@@ -1,0 +1,5 @@
+<van-collapse accordion value="{{activeName}}" bind:change="onChange">
+  <van-collapse-item title="{{'反馈:' + item.value}}" name="{{index+1}}" wx:for='{{list}}'>
+    开发者回复:{{item.replyData||'暂没回复'}}
+  </van-collapse-item>
+</van-collapse>

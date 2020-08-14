@@ -1,58 +1,33 @@
-// pages/suggest/suggest.js
+// pages/suggestList/suggestList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    autosize:{
-      maxHeight:300,
-      minHeight:100
-    },
-    value:'',
-    buttonShow:true
+    activeName: '1', 
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList()
   },
-  intoSuggestList(){
-    wx.navigateTo({
-      url: '/pages/suggestList/suggestList',
-    })
-  },
-
-  valueChange(e){
-    console.log(e)
+  onChange(event) {
+    console.log(event)
     this.setData({
-      value:e.detail,
-      buttonShow:e.detail.length>0?false:true
-    })
+      activeName: event.detail,
+    });
   },
-
-  async submit(){
-    if(!this.data.value){
-      
-    } 
+  async getList(){
     const db = wx.cloud.database()
-    var res = await db.collection('feedback').add({
-      data:{value:this.data.value}
-    })
+    var res = await db.collection('feedback').get()
     console.log(res)
-    if(res.errMsg=="collection.add:ok"){
-      wx.showToast({
-        title: '反馈成功',
-      })
-      setTimeout(() => {
-        wx.navigateBack({
-          delta: 1,
-        })
-      }, 1500);
-      
-    }
+    this.setData({
+      list:res.data.reverse()
+    })
   },
 
   /**

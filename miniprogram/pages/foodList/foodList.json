@@ -1,4 +1,8 @@
-{
-  "usingComponents": {},
-  "navigationStyle": "custom"
+{ 
+  "navigationBarTitleText": "食物列表",
+  "navigationBarBackgroundColor": "#00594f",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "mayLike": "../../components/mayLike/mayLike"
+  }
 }

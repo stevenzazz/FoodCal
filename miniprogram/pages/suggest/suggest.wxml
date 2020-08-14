@@ -17,4 +17,7 @@
     autosize='{{autosize}}'
   />
 </van-cell-group>
-<van-button type="info" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='submit'>提交</van-button>
+<van-button type="info" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='submit' disabled='{{buttonShow}}'>提交</van-button>
+
+<van-button type="warning" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='intoSuggestList'>反馈列表及回复</van-button>
+

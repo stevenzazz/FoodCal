@@ -1,7 +1,7 @@
 page{
   /* background-image: linear-gradient(#00594f, #3c8750); */
   background: #00594f;
-  padding-top: 120rpx;
+  padding-top: 20rpx;
 }
 .foodbox{
   width: 710rpx;

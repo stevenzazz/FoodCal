@@ -1,4 +1,4 @@
-<view class='foodbox por' wx:for='{{foodList}}' catchtap="intoDetail" data-id="{{item.id}}">
+<!-- <view class='foodbox por' wx:for='{{foodList}}' catchtap="intoDetail" data-id="{{item.id}}">
   <image style="width:160rpx;height:160rpx;border-radius: 20rpx;background:#f5f5f5;left:20rpx;top:20rpx;" class="poa" src="{{item.thumbImage}}"></image>
   <view class="name poa one-row">{{item.name}}</view>
   <view style="color:green;left:210rpx;top:88rpx;" class="poa">{{item.calory}}千卡</view>
@@ -8,7 +8,10 @@
   <view class="poa" style="left: 245rpx;top: 134rpx;" wx:if='{{item.healthLight==3}}'>红灯食品谨慎食用</view>
   <image src="../../images/more.png" style="width:60rpx;height:60rpx;right:25rpx;top:68rpx;" class="poa"></image>
 </view> 
+ -->
+
+<view class="botton pof" style="left:0;top:80vh;z-index:1;box-shadow: 0rpx 0rpx 5rpx WhiteSmoke" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
 
 
-<view class="botton pof" style="left:0;top:80vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200'>返回</view>
 
+<mayLike foodList='{{foodList}}' />

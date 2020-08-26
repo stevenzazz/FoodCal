@@ -1,6 +1,5 @@
-<image style='width:750rpx;height:520rpx;' src="{{foodData.imgUrl}}" mode="aspectFill" >
+<image style='width:750rpx;height:520rpx;border-radius: 0 0 30rpx 30rpx;' src="{{foodData.imgUrl}}" mode="aspectFill" >
 </image> 
-<view class="flex-r"></view>
 <view class="title">{{foodData.name}}</view>
 <view style="color:#fff;margin-left:40rpx;font-size: 60rpx;" wx:if='{{foodData.compare.amount1}}'>100克≈{{foodData.compare.amount1+foodData.compare.unit1+foodData.compare.target_name}}</view>
 

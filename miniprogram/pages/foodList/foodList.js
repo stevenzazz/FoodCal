@@ -7,7 +7,8 @@ Page({
   data: {
     pageNums:1,
     foodList:[],
-    value:''
+    value:'',
+    isLogin:false
   },
 
   /**
@@ -63,9 +64,16 @@ Page({
     })
   },  
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  getUserinfo(e){
+    console.log(e)
+    if(e.detail.errMsg=="getUserInfo:ok"){
+      this.setData({
+        isLogin: true
+      });
+    }
+  },
+
+  
   onReady: function () {
 
   },
@@ -74,7 +82,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.getSetting({
+      success: res => {
+        if(res.authSetting['scope.userInfo']){
+          this.setData({
+            isLogin: true
+          });
+        }
+      }
+    })
+   
   },
 
   /**

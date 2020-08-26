@@ -1,5 +1,5 @@
 { 
-  "navigationBarTitleText": "食物列表",
+  "navigationBarTitleText": "",
   "navigationBarBackgroundColor": "#00594f",
   "navigationBarTextStyle": "white",
   "usingComponents": {

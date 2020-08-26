@@ -63,3 +63,15 @@ page{
   background: #00884f;
   border-radius: 0 50rpx 50rpx 0;
 }
+
+.z {
+	z-index: 12;
+	position: fixed;
+}
+
+.free-btn-bordernone{
+  background: none !important;
+}
+.free-btn-bordernone::after{
+  border: none;
+}

@@ -36,3 +36,19 @@
   margin:30rpx 0 0 520rpx;
 }
 
+
+@keyframes z {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.z8{
+  animation: z 8s infinite linear;
+}
+.z2{
+  animation: z .3s infinite linear;
+}

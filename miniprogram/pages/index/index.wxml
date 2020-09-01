@@ -1,4 +1,4 @@
-<image src='../../images/bg.gif' class='pof bg' mode='aspectFill' />
+<image src='{{imgSrc}}' class='pof bg' mode='aspectFill' />
 <!-- <view class="title">食物卡路里查询</view> -->
 <!-- <image src='../../images/title.png' class="poa title" /> -->
 
@@ -6,3 +6,13 @@
 
 <view class="botton" hover-class="hoverClass" catchtap="search" hover-stay-time='200'>搜索</view>
 
+
+<image src="../../images/feng.png" class="pof {{speed?'z2' : 'z8'}}" style="width:100rpx;height:100rpx;bottom:40rpx;right:60rpx;z-index:2;" catchtap="onFengche" bindlongpress='downimg'></image>
+<view style="width:10rpx;height:100rpx;border:1rpx solid #84ece3;bottom:0rpx;right:102rpx;z-index:1;border-bottom:none;" class="pof"></view>
+
+
+
+<view class="pof animated fadeIn" style="background: rgba(0,0,0,0.50);width:100vw;height:100vh;top:0;left:0;z-index:3;" catchtap="offPrompt" wx:if='{{offPrompt}}'>
+  <view style="color:#fff;bottom: 442rpx;right: 126rpx;" class="poa">点击风车更换背景 长按可以保存哦~</view> 
+  <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/箭头_右上 (1).png" style="width:120rpx;height:120rpx;transform: rotate(90deg);bottom: 140rpx;right: 134rpx;" class="poa"></image>
+</view>

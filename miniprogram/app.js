@@ -21,8 +21,6 @@ App({
         traceUser: true,
       })
     }
-
-    this.globalData = {}
   },
 
   getUserinfo(){
@@ -37,6 +35,6 @@ App({
     })
   },
   globalData:{
-    
+    imgType: wx.getStorageSync('imgType') || 'fengjing'
   }
 })

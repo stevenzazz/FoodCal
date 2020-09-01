@@ -1,20 +1,106 @@
-import { searchFoodList } from '../../network/api'
+import { searchFoodList,getImage } from '../../network/api'
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    value:''
+    value:'',
+    speed:false,
+    imgSrc:'',
+    offPrompt:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    var imgSrc = wx.getStorageSync('imgSrc') || '../../images/bg.gif'
+    var offPrompt = wx.getStorageSync('offPrompt') == 'false' ? false : true
+    this.setData({
+      imgSrc,offPrompt
+    })
   },
 
+  onFengche(){
+    var z = () =>{
+      this.setData({
+        speed:!this.data.speed
+      })
+    }
+    z()
+    setTimeout(async() => {
+      var res = await getImage()
+      console.log(res)
+      if(res.code==200){
+        this.setData({imgSrc:res.imgurl})
+      }
+      z()
+    }, 300);
+  },
+
+  downimg(){
+    var that = this
+    wx.showActionSheet({
+      itemList: ['保存到手机', '将图片设为默认背景'],
+      success (res) {
+        console.log(res.tapIndex)
+        if(res.tapIndex==0){
+          if(that.data.imgSrc=='../../images/bg.gif'){
+            wx.getImageInfo({
+              src: '../../images/bg.gif',
+              success(res) { 
+                console.log(res)
+                wx.saveImageToPhotosAlbum({
+                    filePath:res.path,
+                    success(res) { 
+                      console.log(res)
+                    },fail:err=>{
+                      console.log(err)
+                    }
+                })
+                }
+            })
+          }else{
+            wx.downloadFile({
+              url: that.data.imgSrc,
+              success: res =>{
+                console.log(res)
+                wx.saveImageToPhotosAlbum({
+                  filePath:res.tempFilePath,
+                  success(res) { 
+                    console.log(res)
+                  },fail:err=>{
+                    console.log(err)
+                  }
+              })
+              }
+            })
+          }
+        }else if(res.tapIndex==1){
+          wx.setStorageSync('imgSrc', that.data.imgSrc)
+          wx.showToast({
+            title: '成功',
+          })
+        }
+        else if(res.tapIndex==2){
+          app.globalData.imgType = 'dongman'
+          wx.setStorageSync('imgType', 'dongman')
+        }
+        else if(res.tapIndex==3){
+          app.globalData.imgType = 'fengjing'
+          wx.setStorageSync('imgType', 'fengjing')
+        }
+      },
+      fail (res) {
+        console.log(res.errMsg)
+      }
+    })
+    
+    
+    
+  },
   // async getxig(){
   //   var res = await searchFoodList({
   //     page:1,
@@ -37,6 +123,13 @@ Page({
     wx.navigateTo({
       url: '/pages/foodList/foodList?value=' + value,
     })
+  },
+
+  offPrompt(){
+    this.setData({
+      offPrompt:false
+    })
+    wx.setStorageSync('offPrompt', 'false')
   },
 
   /**

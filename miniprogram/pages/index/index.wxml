@@ -2,7 +2,7 @@
 <!-- <view class="title">食物卡路里查询</view> -->
 <!-- <image src='../../images/title.png' class="poa title" /> -->
 
-<input class="inputBox" placeholder="输入要查找的食物吧~" model:value="{{value}}"></input>
+<input class="inputBox" placeholder="输入要查找的食物吧~" model:value="{{value}}" bindconfirm='search' confirm-type='search'></input>
 
 <view class="botton" hover-class="hoverClass" catchtap="search" hover-stay-time='200'>搜索</view>
 

@@ -43,7 +43,7 @@ Page({
   downimg(){
     var that = this
     wx.showActionSheet({
-      itemList: ['保存到手机', '将图片设为默认背景'],
+      itemList: ['保存到手机', '将图片设为默认背景','恢复默认壁纸'],
       success (res) {
         console.log(res.tapIndex)
         if(res.tapIndex==0){
@@ -83,14 +83,12 @@ Page({
           wx.showToast({
             title: '成功',
           })
-        }
-        else if(res.tapIndex==2){
-          app.globalData.imgType = 'dongman'
-          wx.setStorageSync('imgType', 'dongman')
-        }
-        else if(res.tapIndex==3){
-          app.globalData.imgType = 'fengjing'
-          wx.setStorageSync('imgType', 'fengjing')
+        }else if(res.tapIndex==2){
+          that.setData({
+            imgSrc:'../../images/bg.gif'
+          })
+          wx.setStorageSync('imgSrc', that.data.imgSrc)
+
         }
       },
       fail (res) {

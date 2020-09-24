@@ -1,5 +1,9 @@
-page{
+/* page{
   background: #00594f;
+} */
+page{
+  background-color: #e4ecf5;
+  padding-bottom: 60rpx;
 }
 .title{
   color: #fff;

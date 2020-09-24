@@ -1,8 +1,7 @@
-<image style='width:750rpx;height:520rpx;border-radius: 0 0 30rpx 30rpx;' src="{{foodData.imgUrl}}" mode="aspectFill" >
+<!-- <image style='width:750rpx;height:520rpx;border-radius: 0 0 30rpx 30rpx;' src="{{foodData.imgUrl}}" mode="aspectFill" >
 </image> 
 <view class="title">{{foodData.name}}</view>
 <view style="color:#fff;margin-left:40rpx;font-size: 60rpx;" wx:if='{{foodData.compare.amount1}}'>100克≈{{foodData.compare.amount1+foodData.compare.unit1+foodData.compare.target_name}}</view>
-
 <view style="color:#fff;margin-left:40rpx;font-size: 38rpx;margin-top: 10rpx;">每{{foodData.weight}}克含营养元素:</view>
 <view style="width:670rpx;background:#fff;margin-left:40rpx;padding:20rpx;border-radius: 20rpx;margin-top: 20rpx;" class="flex-c">
   <view class="elementItme" style="font-size:80rpx;margin:20rpx 0;">卡路里:{{foodData.calory}}千卡</view>
@@ -15,15 +14,82 @@
   <view class="elementItme">{{foodData.appraise}}</view>
 </view>
 <view style="height:50rpx;"></view> 
-
-
 <view class="botton pof" style="left:0;top:7vh;" hover-class="hoverClass" catchtap="back" hover-stay-time='200' wx:if='{{scene!=1154}}'>返回</view>
 <view class="botton pof" style="left:0;top:13vh;" hover-class="hoverClass" catchtap="toSuggest" hover-stay-time='200' wx:if='{{scene!=1154}}'>建议</view>
 <view class="botton pof" style="left:0;top:19vh;" hover-class="hoverClass" catchtap="backHome" hover-stay-time='200' wx:if='{{scene!=1154}}'>去首页</view>
-
-
 <image src="https://resource.51tomi.com/images/bg/shareMoments@2x.png" style="width:312rpx;height:184rpx;left:364rpx;top:10%;z-index:19;" class="pof" wx:if="{{shareMoments&&scene!=1154&&platform!='ios'}}" catchtap="offShareMoments"></image>
 
 
 
+ -->
 
+
+
+
+<!-- new -->
+<image style='width:750rpx;height:600rpx;' src='{{foodData.imgUrl}}' mode="aspectFill"></image>
+<view class="flex-r por center">
+  <view style="font-family: PingFangSC-Regular;font-size: 48rpx;color: #3E465B;letter-spacing: 2rpx;line-height: 60rpx;height:60rpx;margin-left:30rpx;width:320rpx;" class="one-row">{{foodData.name}}</view>
+  <image src="../../images/JuXingBeiFen2_3x.png" style="width:200rpx;height:200rpx;right:0;top:-80rpx;" class="poa"></image>
+  <image src="../../images/JuXingBeiFen2_3x.png" style="width:200rpx;height:200rpx;right:120rpx;top:-80rpx;" class="poa"></image>
+  <image src="../../images/JuXingBeiFen2_3x.png" style="width:200rpx;height:200rpx;right:240rpx;top:-80rpx;" class="poa"></image>
+  <image style="width:30rpx;height:30rpx;right:310rpx;top:20rpx;" src="../../images/back.png" class="poa" catchtap='back'></image>
+  <image style="width:50rpx;height:46rpx;right:180rpx;top:10rpx;" src="../../images/home.png" class="poa" catchtap='backHome'></image>
+  <image style="width:30rpx;height:30rpx;right:68rpx;top:20rpx;" src="../../images/toushu.png" class="poa" catchtap="toSuggest"></image>
+
+  <!-- <image src="../../images/JuXingBeiFen2_3x.png" style="width:240rpx;height:240rpx;"></image>
+  <image src="../../images/JuXingBeiFen2_3x.png" style="width:240rpx;height:240rpx;"></image> -->
+
+</view>
+
+<view class="flex-c" >
+  <view style="width:750rpx;height:160rpx;margin-top:72rpx;" class="flex-r por">
+      <image style="width:120rpx;height:120rpx;margin:20rpx 0 0 30rpx;" src="../../images/p5921179ea12d1297451_2_3x.png"></image>
+      <view class="flex-c" style="margin:34rpx 0 0 30rpx;">
+          <view style="font-family: PingFangSC-Regular;font-size: 40rpx;color: #232323;">卡路里含量:{{foodData.calory}}calory</view>
+          <view style="opacity: 0.54;font-family: PingFangSC-Regular;font-size: 28rpx;color: #555555;">每{{foodData.weight}}克</view>
+      </view>
+      <image src="../../images/JuXingBeiFen4_3x.png" style="width:140rpx;height:140rpx;right:30rpx;" class="poa"></image>
+      <image style="width:30rpx;height:30rpx;right:72rpx;top:64rpx;" src="../../images/more-2-fill.png" class="poa" catchtap='onMore'></image>
+
+  </view>   
+
+
+
+
+  <view style="width:750rpx;height:160rpx;margin-top:40rpx;" class="flex-r por">
+      <image style="width:120rpx;height:120rpx;margin:20rpx 0 0 30rpx;" src="../../images/p5921179ea12d1297451_3_3x.png"></image>
+      <view class="flex-c" style="margin:34rpx 0 0 30rpx;">
+          <view style="font-family: PingFangSC-Regular;font-size: 40rpx;color: #232323;">碳水化合物含量:{{foodData.carbohydrate}}克</view>
+          <view style="opacity: 0.54;font-family: PingFangSC-Regular;font-size: 28rpx;color: #555555;">每{{foodData.weight}}克</view>
+      </view>
+      <image src="../../images/JuXingBeiFen4_3x.png" style="width:140rpx;height:140rpx;right:30rpx;" class="poa"></image>
+      <image style="width:30rpx;height:30rpx;right:72rpx;top:64rpx;" src="../../images/more-2-fill.png" class="poa" catchtap='onMore'></image>
+  </view>
+
+  <view style="width:750rpx;height:160rpx;margin-top:40rpx;" class="flex-r por">
+      <image style="width:120rpx;height:120rpx;margin:20rpx 0 0 30rpx;" src="../../images/p5921179ea12d1297451_3x.png"></image>
+      <view class="flex-c" style="margin:34rpx 0 0 30rpx;">
+          <view style="font-family: PingFangSC-Regular;font-size: 40rpx;color: #232323;">蛋白质含量:{{foodData.calory}}克</view>
+          <view style="opacity: 0.54;font-family: PingFangSC-Regular;font-size: 28rpx;color: #555555;">每{{foodData.weight}}克</view>
+      </view>
+      <image src="../../images/JuXingBeiFen4_3x.png" style="width:140rpx;height:140rpx;right:30rpx;" class="poa"></image>
+      <image style="width:30rpx;height:30rpx;right:72rpx;top:64rpx;" src="../../images/more-2-fill.png" class="poa" catchtap='onMore'></image>
+
+  </view>
+
+
+  <view style="width:750rpx;height:160rpx;margin-top:40rpx;" class="flex-r por">
+      <image style="width:120rpx;height:120rpx;margin:20rpx 0 0 30rpx;" src="../../images/p5921179ea12d1297451_4_3x.png"></image>
+      <view class="flex-c" style="margin:34rpx 0 0 30rpx;">
+          <view style="font-family: PingFangSC-Regular;font-size: 40rpx;color: #232323;">脂肪含量:{{foodData.fat}}克</view>
+          <view style="opacity: 0.54;font-family: PingFangSC-Regular;font-size: 28rpx;color: #555555;">每{{foodData.weight}}克</view>
+      </view>
+      <image src="../../images/JuXingBeiFen4_3x.png" style="width:140rpx;height:140rpx;right:30rpx;" class="poa"></image>
+      <image style="width:30rpx;height:30rpx;right:72rpx;top:64rpx;" src="../../images/more-2-fill.png" class="poa" catchtap='onMore'></image>
+
+  </view>
+
+
+
+</view> 

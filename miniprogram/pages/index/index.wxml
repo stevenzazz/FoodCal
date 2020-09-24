@@ -1,18 +1,55 @@
-<image src='{{imgSrc}}' class='pof bg' mode='aspectFill' />
-<!-- <view class="title">食物卡路里查询</view> -->
-<!-- <image src='../../images/title.png' class="poa title" /> -->
-
+<!-- old -->
+<!-- <image src='{{imgSrc}}' class='pof bg' mode='aspectFill' />
 <input class="inputBox" placeholder="输入要查找的食物吧~" model:value="{{value}}" bindconfirm='search' confirm-type='search'></input>
-
 <view class="botton" hover-class="hoverClass" catchtap="search" hover-stay-time='200'>搜索</view>
-
-
 <image src="../../images/feng.png" class="pof {{speed?'z2' : 'z8'}}" style="width:100rpx;height:100rpx;bottom:40rpx;right:60rpx;z-index:2;" catchtap="onFengche" bindlongpress='downimg'></image>
 <view style="width:10rpx;height:100rpx;border:1rpx solid #84ece3;bottom:0rpx;right:102rpx;z-index:1;border-bottom:none;" class="pof"></view>
-
-
-
 <view class="pof animated fadeIn" style="background: rgba(0,0,0,0.50);width:100vw;height:100vh;top:0;left:0;z-index:3;" catchtap="offPrompt" wx:if='{{offPrompt}}'>
   <view style="color:#fff;bottom: 442rpx;right: 126rpx;" class="poa">点击风车更换背景 长按可以保存哦~</view> 
   <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/箭头_右上 (1).png" style="width:120rpx;height:120rpx;transform: rotate(90deg);bottom: 140rpx;right: 134rpx;" class="poa"></image>
-</view>
+</view> -->
+
+<!--授权-->
+<button wx:if="{{ !isLogin }}" open-type="getUserInfo" plain="{{false}}" bindgetuserinfo='getUserinfo' class='z free-btn-bordernone' style='width:100%;height:100%;top:0;left:0;z-index:999;'>
+</button>
+ 
+
+
+<!-- new -->
+<image src="../../images/SouSuo_3x.png" class="sousuo"></image>
+<view class="poa" style="top: 200rpx;left: 81rpx;background:#e4ecf5;width:100rpx;height:40rpx;background:#e4ecf5;z-index:1;" wx:if="{{focus||value.length>0}}"></view>
+<input type="text" name="" id="" class="poa" style="top: 200rpx;left: 81rpx;z-index:2;" bindfocus='bindfocus' bindblur='bindblur' model:value="{{value}}"  bindconfirm='search' confirm-type='search' />
+
+
+<view class="flex-r center between animated fadeInUp">
+    <view class="flex-c">
+        <view style="font-family: PingFangSC-Regular;font-size: 52rpx;color: #3E465B;letter-spacing: 1rpx;font-weight: 900;margin-left:70rpx;">Hey {{userInfo.nickName}}</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #3E465B;letter-spacing: 1rpx;line-height: 32rpx;margin-left:70rpx;">Welcome 食物卡路里</view>
+    </view>
+    <image src="{{userInfo.avatarUrl||'../../images/1600414980938.jpg'}}" style="width:100rpx;height:100rpx;border-radius:50%;margin-right:60rpx;box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 10px 10px 18px rgba(55, 84, 170, 0.15), -10px -10px 22px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);"></image>
+</view> 
+
+
+<view class="flex-r flexYeswrap fcenter animated fadeInLeft" style="margin-top:60rpx;padding-left: 35rpx;">
+  <view class="por" style="width:350rpx;height:350rpx;" wx:for="{{imageArr}}" catchtap='onBox' data-index="{{index}}">
+      <image src="../../images/JuXing4_3x.png"  style="width:350rpx;height:350rpx;left:0;top:0;z-index:-1;" class="poa"></image> 
+      <image src="../../images/WeiTu{{item}}_3x.png" style="width: 240rpx;height:160rpx;border-radius:20rpx;z-index:1;margin: 60rpx 0 0 46rpx;"></image>
+      <view class="flex-c" style="margin-left: 50rpx;">
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==0}}">全新拟物风格</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==1}}">更新日志</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==2}}">联系开发者</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==3}}">意见反馈</view>
+
+
+
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==5}}">更多功能</view>
+
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index!=5}}">Honey </view>
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index==5}}"> coming soon </view>
+
+      </view>
+  </view>
+ 
+</view>  
+
+

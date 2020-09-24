@@ -1,5 +1,5 @@
 <!-- <view style="width:710rpx;font-family: PingFangSC-Medium;font-size: 32rpx;color: #323333;letter-spacing: 0;line-height: 48rpx;background:#f5f5f5;padding: 28rpx 0 20rpx 40rpx;">猜你喜欢</view> -->
-<view style="background:#00594f;flex-wrap:wrap;display: flex;flex-direction: row;box-sizing: border-box;">
+<view style="background:#e4ecf5;flex-wrap:wrap;display: flex;flex-direction: row;box-sizing: border-box;">
   <ad unit-id="adunit-b8445d1db9319655" ad-type="grid" grid-opacity="0.8" grid-count="4" ad-theme="white" ad-intervals="30"></ad> 
 
   <view style="width:346rpx;margin-top:20rpx;"> 

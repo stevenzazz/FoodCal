@@ -2,6 +2,7 @@
   color:#e5e5e6;font-size:16rpx;bottom:141rpx;left:20rpx;position: absolute;
 }
 .productDetail{
+  
   position: relative;display:inline-block;overflow:hidden;width:346rpx;background:#fff;margin:0 0 20rpx 20rpx;border-radius: 12rpx;display: flex;flex-direction: column;box-sizing: border-box;padding-bottom:16rpx;
 }
 .productImage{

@@ -9,7 +9,12 @@ Page({
     value:'',
     speed:false,
     imgSrc:'',
-    offPrompt:false
+    offPrompt:false,
+    isLogin:false,
+    userInfo:null,
+    imageArr:['',2,3,4,2,3],
+    focus:false
+    
   },
 
   /**
@@ -21,6 +26,43 @@ Page({
     this.setData({
       imgSrc,offPrompt
     })
+  },
+
+  bindblur(){
+    this.setData({
+      focus:false
+    })
+  },
+  bindfocus(){
+    this.setData({
+      focus:true
+    })
+  },
+
+  onBox(e){
+    var index = e.currentTarget.dataset.index
+    if(index==1){
+      wx.navigateTo({
+        url: '/pages/updateLog/updateLog',
+      })
+    }else if(index==2){
+      wx.setClipboardData({
+        data: 'TUDUTU',
+        success (res) {
+          wx.getClipboardData({
+            success (res) {
+              wx.showToast({
+                title: '已复制微信号',
+              })
+            }
+          })
+        }
+      })
+    }else if(index==3){
+      wx.navigateTo({
+        url: '/pages/suggest/suggest',
+      })
+    }
   },
 
   onFengche(){
@@ -39,6 +81,19 @@ Page({
       z()
     }, 300);
   },
+
+
+
+  getUserinfo(e){
+    console.log(e)
+    if(e.detail.errMsg=="getUserInfo:ok"){
+      this.onShow()
+      this.setData({
+        isLogin: true
+      });
+    }
+  },
+
 
   downimg(){
     var that = this
@@ -141,7 +196,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    var _  = this
+    wx.getSetting({
+      success: res => {
+        if(res.authSetting['scope.userInfo']){
+          wx.getUserInfo({
+            success: res => {
+              console.log(res)
+              _.setData({
+                isLogin: true,
+                userInfo:res.userInfo
+              });
+            }
+          })
+          
+        }
+      }
+    })
   },
 
   /**

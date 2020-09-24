@@ -1,6 +1,6 @@
 { 
   "navigationBarTitleText": "",
-  "navigationBarBackgroundColor": "#00594f",
+  "navigationBarBackgroundColor": "#e4ecf5",
   "navigationBarTextStyle": "white",
   "usingComponents": {
     "mayLike": "../../components/mayLike/mayLike"

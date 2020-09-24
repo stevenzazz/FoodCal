@@ -33,6 +33,7 @@ Page({
       wx.setStorageSync('shareMoments', 'false')
     },
 
+
   async getData(id){
     var res = await getFoodDetail({
       id:id,
@@ -44,6 +45,13 @@ Page({
         foodData:res.data
       })
     }
+  },
+
+  onMore(){
+    wx.showToast({
+      title: '更多功能 正在开发中~',
+      icon:'none'
+    })
   },
 
   toSuggest(){

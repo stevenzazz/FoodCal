@@ -1,55 +1,305 @@
-/* page{
-  background: #00594f;
-} */
-page{
-  background-color: #e4ecf5;
-  padding-bottom: 60rpx;
+.mod {
+  width:750rpx;
+  height:1624rpx;
 }
-.title{
-  color: #fff;
-  font-size: 80rpx;
-  font-family: PingFangSC-Medium;
-  margin:20rpx 0 0 40rpx;
-  font-weight: 900;
+.box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  border-radius:16.197783461210573rpx;
+  background-color: #F7F8FB;
+  width:750rpx;
+  height:1624rpx;
+  overflow: hidden;
 }
-.category{
-  color: #fff;
-  font-size: 50rpx;
-  font-family: PingFangSC-Medium;
-  margin:10rpx 0 0 40rpx;
+.action-bg-wrap {
+  display: flex;
+  position: absolute;
+  bottom:-70rpx;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  width:806rpx;
+  height:236rpx;
 }
-.element{
-  padding: 20rpx;
-  width: 640rpx;
-  margin: 20rpx 0 0 24rpx;
-  border-radius: 20rpx;
-  font-size: 40rpx;
-  /* background: rgba(2555, 0, 0, .3) */
+.action-bg {
+  position: absolute;
+  top:0rpx;
+  align-self: center;
+  width:806rpx;
+  height:236rpx;
 }
-.elementItme{
-  color:#00594f;
-  line-height: 60rpx;
-  font-size: 36rpx;
+.wrap {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:26rpx;
+  width:588rpx;
+  height:54rpx;
 }
-
-
-.botton{
-  width: 170rpx;
-  height: 78rpx;
-  text-align: center;
-  line-height: 78rpx;
-  color: #fff;
-  font-size: 33rpx;
-  background: #00594f;
-  border-radius: 0 50rpx 50rpx 0;
+.icon {
+  margin-right:136rpx;
+  width:50rpx;
+  height:54rpx;
 }
-.hoverClass{
-  width: 170rpx;
-  height: 78rpx;
-  text-align: center;
-  line-height: 78rpx;
-  color: #fff;
-  font-size: 33rpx;
-  background: #00884f;
-  border-radius: 0 50rpx 50rpx 0;
+.icon-1 {
+  margin-right:140rpx;
+  width:44rpx;
+  height:44rpx;
+}
+.icon-2 {
+  margin-right:126rpx;
+  width:46rpx;
+  height:46rpx;
+}
+.play {
+  width:46rpx;
+  height:46rpx;
+}
+.empty {
+  position: relative;
+  margin-top:56rpx;
+  border-radius:5rpx;
+  background-image: linear-gradient(59deg, #485563 0%, #29323C 100%);
+  width:268rpx;
+  height:10rpx;
+}
+.item-long {
+  position: absolute;
+  top:-32rpx;
+  align-self: center;
+  width:750rpx;
+  height:1200rpx;
+}
+.bd {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  width:750rpx;
+  height:1308rpx;
+}
+.layer {
+  position: relative;
+  width:750rpx;
+  height:1308rpx;
+}
+.summary {
+  webkit-line-clamp: 3px;
+  position: absolute;
+  bottom:-228rpx;
+  left:58rpx;
+  width:622rpx;
+  height:120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height:40rpx;
+  white-space: pre-wrap;
+  color: #2d3741;
+  font-family: AppleSDGothicNeo-Regular, Apple SD Gothic Neo;
+  font-size:30rpx;
+  font-weight: 400;
+}
+.word {
+  position: absolute;
+  top:26rpx;
+  left:68rpx;
+  line-height:38rpx;
+  letter-spacing:0rpx;
+  white-space: nowrap;
+  color: #2d3741;
+  font-family: Helvetica;
+  font-size:30rpx;
+  font-weight: normal;
+}
+.icon-3 {
+  position: absolute;
+  top:32rpx;
+  right:128rpx;
+  width:36rpx;
+  height:24rpx;
+}
+.icon-4 {
+  position: absolute;
+  top:32rpx;
+  right:88rpx;
+  width:32rpx;
+  height:24rpx;
+}
+.dot {
+  position: absolute;
+  top:40rpx;
+  right:28rpx;
+  width:4rpx;
+  height:8rpx;
+}
+.block {
+  display: flex;
+  position: absolute;
+  top:34rpx;
+  right:34rpx;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-width:2rpx;
+  border-style: solid;
+  border-radius:5.333333492279052rpx;
+  border-color: rgba(45,55,65,0.35);
+  width:44rpx;
+  height:22rpx;
+}
+.color {
+  border-radius:2.666666746139526rpx;
+  background-color: #2D3741;
+  width:36rpx;
+  height:14rpx;
+}
+.icon-5 {
+  position: absolute;
+  top:926rpx;
+  right:136rpx;
+  width:28rpx;
+  height:32rpx;
+}
+.heart {
+  position: absolute;
+  top:930rpx;
+  right:270rpx;
+  width:30rpx;
+  height:28rpx;
+}
+.num {
+  position: absolute;
+  top:922rpx;
+  right:210rpx;
+  line-height:40rpx;
+  white-space: nowrap;
+  color: #262628;
+  font-family: Helvetica;
+  font-size:30rpx;
+  font-weight: normal;
+}
+.min {
+  position: absolute;
+  top:926rpx;
+  right:56rpx;
+  line-height:38rpx;
+  white-space: nowrap;
+  color: #262628;
+  font-family: Helvetica;
+  font-size:20rpx;
+  font-weight: normal;
+}
+.num-1 {
+  position: absolute;
+  top:922rpx;
+  right:92rpx;
+  line-height:38rpx;
+  white-space: nowrap;
+  color: #262628;
+  font-family: Helvetica;
+  font-size:30rpx;
+  font-weight: normal;
+}
+.shop-logo {
+  position: absolute;
+  top:74rpx;
+  right:280rpx;
+  width:184rpx;
+  height:90rpx;
+}
+.icon-6 {
+  position: absolute;
+    top: 110rpx;
+    left: 127rpx;
+    width: 32rpx;
+    height: 34rpx;
+}
+.left {
+  position: absolute;
+  top:114rpx;
+  left:36rpx;
+  width:38rpx;
+  height:22rpx;
+}
+.add {
+  position: absolute;
+  top:104rpx;
+  right:32rpx;
+  width:44rpx;
+  height:44rpx;
+}
+.icon-7 {
+  position: absolute;
+  top:1038rpx;
+  left:58rpx;
+  width:70rpx;
+  height:70rpx;
+}
+.right {
+  position: absolute;
+  top:1060rpx;
+  right:54rpx;
+  width:14rpx;
+  height:22rpx;
+}
+.txt-bg {
+  position: absolute;
+  top:1132rpx;
+  left:34rpx;
+  width:682rpx;
+  height:4rpx;
+}
+.txt-bg-1 {
+  position: absolute;
+  top:1012rpx;
+  left:34rpx;
+  width:682rpx;
+  height:4rpx;
+}
+.info {
+  position: absolute;
+  top:1054rpx;
+  left:168rpx;
+  line-height:36rpx;
+  letter-spacing:1.08rpx;
+  white-space: pre;
+  color: #2d3741;
+  font-family: Helvetica;
+  font-size:26rpx;
+  font-weight: normal;
+}
+.button-bg {
+  position: absolute;
+  top: 898rpx;
+  left: 58rpx;
+  width: 360rpx;
+  height: 90rpx;
+  font-size: 45rpx;
+  line-height: 90rpx;
+}
+.ft {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  margin-top:20rpx;
+  border-radius:10rpx;
+  background-image: linear-gradient(59deg, #485563 0%, #29323C 100%);
+  padding-right:78rpx;
+  padding-left:80rpx;
+  height:90rpx;
+}
+.start-cooking {
+  line-height:38rpx;
+  letter-spacing:2rpx;
+  white-space: pre;
+  color: #e9e9e9;
+  font-family: AppleSDGothicNeo-Medium, Apple SD Gothic Neo;
+  font-size:30rpx;
+  font-weight:500;
 }

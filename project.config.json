@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -31,7 +31,7 @@
   },
   "appid": "wxd283447578e4486b",
   "projectname": "zhouhao",
-  "libVersion": "2.11.3",
+  "libVersion": "2.13.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
@@ -110,7 +110,7 @@
           "id": 7,
           "name": "pages/foodDetails/foodDetails",
           "pathName": "pages/foodDetails/foodDetails",
-          "query": "id=29107",
+          "query": "id=2233",
           "scene": null
         },
         {

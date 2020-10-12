@@ -12,7 +12,7 @@ Page({
     offPrompt:false,
     isLogin:false,
     userInfo:null,
-    imageArr:['',2,3,4,2,3],
+    imageArr:['',2,3,4],
     focus:false
     
   },
@@ -41,7 +41,12 @@ Page({
 
   onBox(e){
     var index = e.currentTarget.dataset.index
-    if(index==1){
+    if(index==0){
+      wx.showToast({
+        title: '正在拼命开发中',
+        icon:'none'
+      })
+    }else if(index==1){
       wx.navigateTo({
         url: '/pages/updateLog/updateLog',
       })

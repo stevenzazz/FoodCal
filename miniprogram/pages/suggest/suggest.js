@@ -10,7 +10,8 @@ Page({
       minHeight:100
     },
     value:'',
-    buttonShow:true
+    buttonShow:true,
+    popupShow:false
   },
 
   /**
@@ -22,6 +23,32 @@ Page({
   intoSuggestList(){
     wx.navigateTo({
       url: '/pages/suggestList/suggestList',
+    })
+  },
+
+  onClose(){
+    this.setData({
+      popupShow:false
+    })
+  },
+
+  logtap(){
+    console.log(12)
+    wx.getImageInfo({
+      src: 'cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/WechatIMG38.jpeg',
+      success:res=>{
+         wx.saveImageToPhotosAlbum({
+            filePath: res.path,
+          })
+      }
+    })
+    
+   
+  },
+
+  showpop(){
+    this.setData({
+      popupShow:true
     })
   },
 

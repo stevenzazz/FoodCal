@@ -8,7 +8,9 @@ Page({
     foodData:null,
     scene:'',
     platform:'',
-    shareMoments:true
+    shareMoments:true,
+    walkTime:0,
+    runTime:0
   },
 
   /**
@@ -24,7 +26,7 @@ Page({
     var id = options.id
     this.getData(id)
   },
-  
+
     // 点击了分享朋友圈不再提示
     offShareMoments(){
       this.setData({
@@ -32,7 +34,13 @@ Page({
       })
       wx.setStorageSync('shareMoments', 'false')
     },
-
+  
+    onShare(){
+      wx.showToast({
+        title: `点击右上角‘•••’即可分享`,
+        icon:'none'
+      })
+    },
 
   async getData(id){
     var res = await getFoodDetail({
@@ -41,10 +49,21 @@ Page({
     })
     console.log(res)
     if(res.status==1){
+      this.calculateTime(res.data.calory)
       this.setData({
         foodData:res.data
       })
     }
+  },
+
+  calculateTime(nums){
+    console.log(nums)
+    var walkTime=0,runTime=0;
+    walkTime = nums / (300 / 60) 
+    runTime = nums / (600 / 60) 
+    this.setData({
+      walkTime,runTime
+    })
   },
 
   onMore(){

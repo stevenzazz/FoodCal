@@ -92,8 +92,8 @@
   position: absolute;
   bottom:-228rpx;
   left:58rpx;
-  width:622rpx;
-  height:120rpx;
+  width:636rpx;
+  /* height:120rpx; */
   overflow: hidden;
   text-overflow: ellipsis;
   line-height:40rpx;
@@ -212,18 +212,21 @@
   height:90rpx;
 }
 .icon-6 {
-  position: absolute;
+  position: fixed;
     top: 110rpx;
     left: 127rpx;
     width: 32rpx;
     height: 34rpx;
+    z-index: 1;
 }
 .left {
-  position: absolute;
+  position: fixed;
   top:114rpx;
   left:36rpx;
   width:38rpx;
   height:22rpx;
+  z-index: 1;
+
 }
 .add {
   position: absolute;
@@ -302,4 +305,43 @@
   font-family: AppleSDGothicNeo-Medium, Apple SD Gothic Neo;
   font-size:30rpx;
   font-weight:500;
+}
+.unit{
+  width: 100%;
+  border-radius: 18rpx;
+  margin-top: 10rpx;
+  background-color: #f5f5f5;
+}
+.unit .title{
+  font-size: 40rpx;
+  margin:20rpx 0 20rpx 15rpx; 
+}
+.unitWeight{
+  margin: 20rpx;
+}
+.unitWeight1{
+  margin: 20rpx 0 0 20rpx;
+}
+
+
+
+.productImg{
+  width: 750rpx;
+  height: 1200rpx;
+  top:0;
+  left: 0;
+  z-index: -1;
+}
+.info1{
+  z-index: 2;
+  margin-top: 900rpx;
+}
+.name{
+  font-size: 42rpx;
+  margin: 10rpx 0 10rpx 30rpx;
+  width: 700rpx;
+  font-weight: 900;
+}
+page{
+  background-color: #f6f9ff;
 }

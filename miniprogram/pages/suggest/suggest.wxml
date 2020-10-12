@@ -4,7 +4,14 @@
   background="#ecf9ff"
   left-icon="star"
   wrapable
-  text="开发者为刚毕业的程序员一枚，前段时间花了4个月减肥瘦了40斤，所以萌生了一个制作这样一个小程序的想法，想法很简单，制作一个方便，极简，数据明确的卡路里查询工具，抛开一切，只留搜索，在吃食物以前只需秒开小程序，输入要吃的食物名，就能得到你想要的数据，在使用中如果有什么好的建议和想法。都可以留下亲的建议。希望亲们能够支持一下我，点击一下广告，让我能有点微薄的收益，谢谢啦~"
+  text="开发者为刚毕业的程序员一枚，前段时间花了4个月减肥瘦了40斤，所以萌生了一个制作这样一个小程序的想法，想法很简单，制作一个方便，极简，数据明确的卡路里查询工具，抛开一切，只留搜索，在吃食物以前只需秒开小程序，输入要吃的食物名，就能得到你想要的数据，在使用中如果有什么好的建议和想法。都可以留下亲的建议"
+/>
+<van-notice-bar
+  color="#fff"
+  background="#f29b73"
+  left-icon="wechat"
+  wrapable
+  text="希望亲们能够支持一下我，自愿捐赠，让开发者也能有点微薄的收益，谢谢啦~"
 />
 <van-cell-group>
   <van-field
@@ -20,4 +27,15 @@
 <van-button type="info" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='submit' disabled='{{buttonShow}}'>提交</van-button>
 
 <van-button type="warning" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='intoSuggestList'>反馈列表及回复</van-button>
+
+
+
+
+<van-popup show="{{ popupShow }}" bind:close="onClose">
+  <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/WechatIMG38.jpeg" mode="widthFix" bindlongtap='logtap'></image>
+</van-popup>
+<van-button type="primary" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='showpop'>捐赠</van-button>
+
+
+
 

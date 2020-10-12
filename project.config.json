@@ -17,7 +17,7 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
     "useMultiFrameRuntime": false,
-    "useApiHook": false,
+    "useApiHook": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -110,7 +110,7 @@
           "id": 7,
           "name": "pages/foodDetails/foodDetails",
           "pathName": "pages/foodDetails/foodDetails",
-          "query": "id=2233",
+          "query": "id=4526",
           "scene": null
         },
         {

@@ -17,8 +17,8 @@
 
 <!-- new -->
 <image src="../../images/SouSuo_3x.png" class="sousuo"></image>
-<view class="poa" style="top: 200rpx;left: 81rpx;background:#e4ecf5;width:100rpx;height:40rpx;background:#e4ecf5;z-index:1;" wx:if="{{focus||value.length>0}}"></view>
-<input type="text" name="" id="" class="poa" style="top: 200rpx;left: 81rpx;z-index:2;" bindfocus='bindfocus' bindblur='bindblur' model:value="{{value}}"  bindconfirm='search' confirm-type='search' />
+<view class="poa" style="top: 326rpx;left: 81rpx;background:#e4ecf5;width:100rpx;height:40rpx;background:#e4ecf5;z-index:1;" wx:if="{{focus||value.length>0}}"></view>
+<input type="text" name="" id="" class="poa" style="top: 326rpx;left: 81rpx;z-index:2;" bindfocus='bindfocus' bindblur='bindblur' model:value="{{value}}"  bindconfirm='search' confirm-type='search' />
 
 
 <view class="flex-r center between animated fadeInUp">
@@ -35,7 +35,7 @@
       <image src="../../images/JuXing4_3x.png"  style="width:350rpx;height:350rpx;left:0;top:0;z-index:-1;" class="poa"></image> 
       <image src="../../images/WeiTu{{item}}_3x.png" style="width: 240rpx;height:160rpx;border-radius:20rpx;z-index:1;margin: 60rpx 0 0 46rpx;"></image>
       <view class="flex-c" style="margin-left: 50rpx;">
-        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==0}}">全新拟物风格</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==0}}">我的摄入</view>
         <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==1}}">更新日志</view>
         <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==2}}">联系开发者</view>
         <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==3}}">意见反馈</view>
@@ -44,8 +44,10 @@
 
         <view style="font-family: PingFangSC-Regular;font-size: 28rpx;color: #3E465B;letter-spacing: 0.55px;line-height: 32rpx;margin-top: 5rpx;" wx:if="{{index==5}}">更多功能</view>
 
-        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index!=5}}">Honey </view>
-        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index==5}}"> coming soon </view>
+        <!-- <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index!=5}}">Honey </view> -->
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index==0}}">记录每日摄入卡路里</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index==2}}">开发者微信</view>
+        <view style="font-family: PingFangSC-Regular;font-size: 22rpx;color: #8792AD;letter-spacing: 0.7px;"  wx:if="{{index==3}}">献出您的宝贵意见</view>
 
       </view>
   </view>

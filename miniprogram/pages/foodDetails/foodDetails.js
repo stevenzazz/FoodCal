@@ -10,13 +10,39 @@ Page({
     platform:'',
     shareMoments:true,
     walkTime:0,
-    runTime:0
+    runTime:0,
+    suggest:[],
+    page:1,
+    slotshow:false,
+    // fromlist:true,
+    off : true,
+    animationData: {},
+    imageAnimationData: {},
+    animation:'',
+    imageAnimation:'',
+    suggestG:'' ,
+    recordShow:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 创建动画
+    var animation = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
+
+    var imageAnimation = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'ease',
+    })
+    this.imageAnimation = imageAnimation
+
+
+
     var scene = wx.getLaunchOptionsSync().scene
     this.setData({
       scene:scene,
@@ -26,6 +52,43 @@ Page({
     var id = options.id
     this.getData(id)
   },
+
+
+  openSlot: function () {
+    // 使用动画
+    if (this.data.off) {
+      // 盒子高度拉长
+      this.animation.height(200).step()
+      this.setData({
+        animationData: this.animation.export()
+      })
+      // 点击图 旋转一周
+      this.imageAnimation.rotate(180).step()
+      this.setData({
+        imageAnimationData: this.imageAnimation.export()
+      })
+    } else {
+      // 盒子高度恢复
+      this.animation.height(54).step()
+      this.setData({
+        animationData: this.animation.export()
+      })
+      // 点击图 旋恢复
+      this.imageAnimation.rotate(-180).step()
+      this.setData({
+        imageAnimationData: this.imageAnimation.export()
+      })
+    }
+    this.data.off = !this.data.off
+  },
+  closeSlot: function() {
+
+    this.setData({
+      slotshow:false,
+    })
+  },
+
+
 
     // 点击了分享朋友圈不再提示
     offShareMoments(){
@@ -41,6 +104,7 @@ Page({
         icon:'none'
       })
     },
+
 
   async getData(id){
     var res = await getFoodDetail({
@@ -101,9 +165,19 @@ Page({
   //   })
   //   return newArr;
   // },
-
-
-
+  binddragging(e){
+    console.log(e.detail.scrollLeft)
+  },
+  record(){
+    this.setData({
+      recordShow:true
+    })
+  },
+  onClose(){
+    this.setData({
+      recordShow:false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

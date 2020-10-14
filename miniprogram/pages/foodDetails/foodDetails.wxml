@@ -81,3 +81,41 @@
     </van-cell-group>
   </view>
 </view>
+
+
+<!-- 记录弹窗 -->
+<van-popup show="{{ recordShow }}" bind:close="onClose" closeable position="bottom" round>
+  <view class="record">
+    <view class="flex-r">
+      <image src="{{foodData.imgUrl}}" style="width:100rpx;height:100rpx;"></image>
+      <view class="flex-c">
+        <view>{{foodData.name}}</view>
+        <view>{{foodData.weight}}克 / {{foodData.calory}}卡</view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="flex-c w750 center">
+      <view>{{foodData.weight}}克</view>
+      <view>{{foodData.calory}}卡</view>
+    </view>
+    <scroll-view scroll-x style="width: 100%; white-space: nowrap;" bindscroll='binddragging'>
+      <view class="green" style="display: inline-block; width: 200px; height: 100px; background: green;"></view>
+      <view class="red" style="display: inline-block; width: 200px; height: 100px; background: red;"></view>
+      <view class="yellow" style="display: inline-block; width: 200px; height: 100px; background: yellow;"></view>
+      <view class="blue" style="display: inline-block; width: 200px; height: 100px; background: blue;"></view>
+    </scroll-view>
+    <van-button type="primary" size="large" custom-class='queding'>确定</van-button> 
+  </view>
+</van-popup>
+
+<view animation="{{animationData}}" catchtap="openSlot"  style="width:108rpx;height:108rpx;position:fixed;left:582rpx;bottom:118rpx;z-index:20;border-radius:54rpx;box-shadow: 0px 0px 20rpx rgba(0,0,0,0.2);background: #FFFFFF;overflow: hidden;">
+  <image  src="https://resource.51tomi.com/images/icon/slotmore.png"  style="width:48rpx;height:48rpx;margin:30rpx;" animation="{{imageAnimationData}}" />
+  <view class="flex-c" catchtap="record" style="width:108rpx;height:108rpx;padding-left:30rpx">
+    <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/记录.png"  style="width:32rpx;height:32rpx;margin-top:28rpx;margin-left:8rpx"/>
+    <view class="black" style="opacity:0.8;lin-height:22rpx;font-size:16rpx;margin-left:8rpx">记录</view>
+  </view>
+  <view class="flex-c" catchtap="goTop" style="width:108rpx;height:108rpx;padding-left:30rpx;">
+    <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/首页.png"  style="width:32rpx;height:32rpx;margin-top:28rpx;margin-left:8rpx"/>
+    <view class="black" style="opacity:0.8;lin-height:22rpx;font-size:16rpx;margin-left:8rpx">首页</view>
+  </view>
+</view>

@@ -345,3 +345,15 @@
 page{
   background-color: #f6f9ff;
 }
+.record{
+  width: 750rpx;
+  height: 600rpx;
+}
+
+scroll-view {
+  width: 100%;
+  white-space: nowrap;
+}
+.queding{
+  width: 750rpx;
+}

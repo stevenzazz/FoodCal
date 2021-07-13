@@ -1,27 +1,29 @@
-import { getFoodDetail } from '../../network/api'
+import {
+  getFoodDetail
+} from '../../network/api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    foodData:null,
-    scene:'',
-    platform:'',
-    shareMoments:true,
-    walkTime:0,
-    runTime:0,
-    suggest:[],
-    page:1,
-    slotshow:false,
+    foodData: null,
+    scene: '',
+    platform: '',
+    shareMoments: true,
+    walkTime: 0,
+    runTime: 0,
+    suggest: [],
+    page: 1,
+    slotshow: false,
     // fromlist:true,
-    off : true,
+    off: true,
     animationData: {},
     imageAnimationData: {},
-    animation:'',
-    imageAnimation:'',
-    suggestG:'' ,
-    recordShow:false
+    animation: '',
+    imageAnimation: '',
+    suggestG: '',
+    recordShow: false
   },
 
   /**
@@ -45,9 +47,9 @@ Page({
 
     var scene = wx.getLaunchOptionsSync().scene
     this.setData({
-      scene:scene,
-      platform:wx.getSystemInfoSync().platform,
-      shareMoments:wx.getStorageSync('shareMoments') == 'false' ? false : true
+      scene: scene,
+      platform: wx.getSystemInfoSync().platform,
+      shareMoments: wx.getStorageSync('shareMoments') == 'false' ? false : true
     })
     var id = options.id
     this.getData(id)
@@ -81,74 +83,80 @@ Page({
     }
     this.data.off = !this.data.off
   },
-  closeSlot: function() {
+  closeSlot: function () {
 
     this.setData({
-      slotshow:false,
+      slotshow: false,
     })
   },
 
 
 
-    // 点击了分享朋友圈不再提示
-    offShareMoments(){
-      this.setData({
-        shareMoments:false
-      })
-      wx.setStorageSync('shareMoments', 'false')
-    },
-  
-    onShare(){
-      wx.showToast({
-        title: `点击右上角‘•••’即可分享`,
-        icon:'none'
-      })
-    },
+  // 点击了分享朋友圈不再提示
+  offShareMoments() {
+    this.setData({
+      shareMoments: false
+    })
+    wx.setStorageSync('shareMoments', 'false')
+  },
+
+  onShare() {
+    wx.showToast({
+      title: `点击右上角‘•••’即可分享`,
+      icon: 'none'
+    })
+  },
 
 
-  async getData(id){
+  async getData(id) {
     var res = await getFoodDetail({
-      id:id,
-      m:'getIngredientDetails'
+      id: id,
+      m: 'getIngredientDetails'
     })
     console.log(res)
-    if(res.status==1){
+    if (res.status == 1) {
       this.calculateTime(res.data.calory)
       this.setData({
-        foodData:res.data
+        foodData: res.data
       })
     }
   },
 
-  calculateTime(nums){
+  calculateTime(nums) {
     console.log(nums)
-    var walkTime=0,runTime=0;
-    walkTime = nums / (300 / 60) 
-    runTime = nums / (600 / 60) 
+    var walkTime = 0,
+      runTime = 0;
+    walkTime = nums / (300 / 60)
+    runTime = nums / (600 / 60)
     this.setData({
-      walkTime,runTime
+      walkTime,
+      runTime
     })
   },
-
-  onMore(){
+  goTop() {
+    wx.redirectTo({
+      url: '../index/index',
+    })
+  },
+  onMore() {
     wx.showToast({
       title: '更多功能 正在开发中~',
-      icon:'none'
+      icon: 'none'
     })
   },
 
-  toSuggest(){
+  toSuggest() {
     wx.navigateTo({
       url: '/pages/suggest/suggest'
     })
   },
 
-  back(){
+  back() {
     wx.navigateBack({
       delta: 1
     })
   },
-  backHome(){
+  backHome() {
     wx.reLaunch({
       url: '/pages/index/index'
     })
@@ -165,17 +173,24 @@ Page({
   //   })
   //   return newArr;
   // },
-  binddragging(e){
+  binddragging(e) {
     console.log(e.detail.scrollLeft)
   },
-  record(){
+  record() {
+    wx.showToast({
+      title: '功能即将上线',
+      icon: 'none'
+    })
+
+    return
+
     this.setData({
-      recordShow:true
+      recordShow: true
     })
   },
-  onClose(){
+  onClose() {
     this.setData({
-      recordShow:false
+      recordShow: false
     })
   },
   /**
@@ -202,7 +217,7 @@ Page({
         id: this.data.foodData.id
       },
     }
-  }, 
+  },
 
 
   /**
@@ -237,6 +252,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })

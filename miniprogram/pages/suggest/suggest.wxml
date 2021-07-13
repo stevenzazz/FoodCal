@@ -32,7 +32,7 @@
 
 
 <van-popup show="{{ popupShow }}" bind:close="onClose">
-  <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/WechatIMG38.jpeg" mode="widthFix" bindlongtap='logtap'></image>
+  <image src="cloud://zhouhao-c89hw.7a68-zhouhao-c89hw-1300970301/icon/6B9856FD-11D4-4F28-B64E-391E9C959612.jpeg" mode="widthFix" bindlongtap='logtap'></image>
 </van-popup>
 <van-button type="primary" round custom-style='margin-top:20rpx;margin-left:360rpx;' bind:click='showpop'>捐赠</van-button>
 
